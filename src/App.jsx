@@ -1,4 +1,5 @@
 import Header from "./Header.jsx";
+import About from "./About.jsx";
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -15,12 +16,20 @@ function Footer() {
   return <p>&copy; {year} Ashanti Lemonia</p>;
 }
 
+function GitHubLink() {
+  let url = "https://github.com/ALem1940";
+  let label = "My GitHub";
+  return <a href={url}>{label}</a>;
+}
+
 function App() {
   return (
     <div>
       <Header />
       <p>Pokémon trainer from Pallet Town.</p>
       <Fortune />
+      <GitHubLink />
+      <About />
       <Footer />
     </div>
   );
