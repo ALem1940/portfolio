@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="container">
         <Header />
-        <p>Pokémon trainer from Pallet Town.</p>
+        <p>I am becoming Her.</p>
         <Fortune />
         <ButtonsRescuePortfolioCard />
         <GitHubLink />
