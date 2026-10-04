@@ -1,3 +1,4 @@
+import "./flex-container.css";
 import Header from "./Header.jsx";
 import About from "./About.jsx";
 import Fortune from "./Fortune.jsx";
@@ -14,11 +15,14 @@ function App() {
         <Header />
         <p>I am becoming Her.</p>
         <Fortune />
-        <ButtonsRescuePortfolioCard />
-        <GreetingCardGeneratorPortfolioCard />
+        <div className="grid">
+          <ButtonsRescuePortfolioCard />
+          <GreetingCardGeneratorPortfolioCard />
+        </div>
         <GitHubLink />
         <About />
         <ProjectCount />
+        <a href="https://github.com/ALem1940/portfolio/pull/1/changes"></a>
 
         <Footer />
       </div>

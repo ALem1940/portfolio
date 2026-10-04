@@ -4,7 +4,7 @@ function ButtonsRescuePortfolioCard() {
   let liveUrl = "https://alem1940.github.io/buttons-rescue/";
   let repoUrl = "https://github.com/ALem1940/buttons-rescue";
   return (
-    <article>
+    <article className="card-jade">
       <h2>{name}</h2>
       <p>{description}</p>
       <p>
