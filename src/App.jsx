@@ -4,6 +4,7 @@ import Fortune from "./Fortune.jsx";
 import GitHubLink from "./GiHubLink.jsx";
 import ProjectCount from "./ProjectCount.jsx";
 import ButtonsRescuePortfolioCard from "./ButtonsRescuePortfolioCard.jsx";
+import GreetingCardGeneratorPortfolioCard from "./GreetingCardGeneratorPortfolioCard.jsx";
 import Footer from "./Footer.jsx";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <p>I am becoming Her.</p>
         <Fortune />
         <ButtonsRescuePortfolioCard />
+        <GreetingCardGeneratorPortfolioCard />
         <GitHubLink />
         <About />
         <ProjectCount />
