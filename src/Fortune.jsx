@@ -1,6 +1,6 @@
-function randomNumber(min, max) {
+const randomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 function Fortune() {
   let fortunes = ["Turn in work early!", "Master Javascript!", "Enjoy React!"];
