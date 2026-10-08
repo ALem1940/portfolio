@@ -1,5 +1,6 @@
 import "./flex-container.css";
 import Header from "./Header.jsx";
+import Hero from "./Hero.jsx";
 import About from "./About.jsx";
 import Fortune from "./Fortune.jsx";
 import GitHubLink from "./GiHubLink.jsx";
@@ -13,6 +14,7 @@ function App() {
     <>
       <div className="container">
         <Header />
+        <Hero />
         <p>I am becoming Her.</p>
         <Fortune />
         <div className="grid">
