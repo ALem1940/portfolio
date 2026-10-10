@@ -7,6 +7,7 @@ import GitHubLink from "./GiHubLink.jsx";
 import ProjectCount from "./ProjectCount.jsx";
 import ButtonsRescuePortfolioCard from "./ButtonsRescuePortfolioCard.jsx";
 import GreetingCardGeneratorPortfolioCard from "./GreetingCardGeneratorPortfolioCard.jsx";
+import Gallery from "./Gallery.jsx";
 import Footer from "./Footer.jsx";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <ButtonsRescuePortfolioCard />
           <GreetingCardGeneratorPortfolioCard />
         </div>
+        <Gallery />
         <GitHubLink />
         <About />
         <ProjectCount />

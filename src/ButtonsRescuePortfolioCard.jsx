@@ -1,8 +1,9 @@
 function ButtonsRescuePortfolioCard() {
-  let name = "Buttons Rescue";
-  let description = "A website for an animal shelter to adopt an adorable cat.";
-  let liveUrl = "https://alem1940.github.io/buttons-rescue/";
-  let repoUrl = "https://github.com/ALem1940/buttons-rescue";
+  const name = "Buttons Rescue";
+  const description =
+    "A website for an animal shelter to adopt an adorable cat.";
+  const liveUrl = "https://alem1940.github.io/buttons-rescue/";
+  const repoUrl = "https://github.com/ALem1940/buttons-rescue";
   return (
     <article className="card-jade">
       <h2>{name}</h2>
