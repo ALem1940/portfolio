@@ -3,9 +3,7 @@ const imageUrl = (width, height, brightness) =>
   width +
   "&h=" +
   height +
-  "&fit=crop&auto=format&bri" +
+  "&fit=crop&auto=format&bri=" +
   brightness;
-
-
 
 export default imageUrl;

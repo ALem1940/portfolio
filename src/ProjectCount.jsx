@@ -13,7 +13,7 @@ function ProjectCount() {
   ];
   return (
     <p>
-      "These are my projects from Level 2. There are {projects.length} in all.
+      These are my projects from Level 2. There are {projects.length} in all.
     </p>
   );
 }
