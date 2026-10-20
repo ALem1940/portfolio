@@ -5,33 +5,33 @@ import "./hero.css";
 function Hero() {
   //const src = heroPhoto(1200, 500)
   //const alt = "Lake by mountains covered in snow"
-  const [src, alt] = heroPhoto(
-    1200,
-    500,
-    0,
-    "Lake by mountains covered in snow",
-  );
+  
   const [sat, setSat] = useState(0);
 
   const showColor = () => {
-    setSat(0);
+    setSat(100);
   };
 
   const showBlackAndWhite = () => {
-    setSat(-100);
+    setSat(0);
   };
 
+
+  const [src, alt] = heroPhoto(
+    1200,
+    500,
+    sat,
+    "Lake by mountains covered in snow")
   return (
     <div className="hero">
-      <img src={src} alt={alt} />
-
+      <img src={src} alt={alt} style={{ filter : `saturate(${sat}%)`}} />
       <p>
         <button onClick={showColor}>Color</button>
         &nbsp;
         <button onClick={showBlackAndWhite}>Black And White</button>
       </p>
     </div>
-  );
+  )
 }
 
 export default Hero;
