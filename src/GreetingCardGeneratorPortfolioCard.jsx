@@ -6,10 +6,21 @@ function GreetingCardGeneratorPortfolioCard() {
     "A playlist page that loads its songs from my own data API.";
   const liveUrl = "https://alem1940.github.io/greeting-card-generator/";
   const repoUrl = "https://github.com/ALem1940/greeting-card-generator";
-  const [likes, setLikes] = useState(0);
+  const [likes, setLikes] = useState(Number(localStorage.getItem("click-lab-likes")))
   const addLike = () => {
-    setLikes(likes + 1);
-  };
+    const next = likes + 1
+    setLikes(next)
+    localStorage.setItem("click-lab-likes", next)
+  }
+
+  const removeLikes = () => {
+    if (likes > 0) {}
+    setLikes(likes - 1)
+  }
+
+  const resetLikes = () => {
+    setLikes(0)
+  }
 
   return (
     <div className="flex-container">
@@ -21,6 +32,10 @@ function GreetingCardGeneratorPortfolioCard() {
           <a href={repoUrl}>Read the code</a>
         </p>
         <button onClick={addLike}>Like {likes}</button>
+        &nbsp;
+        <button onClick={removeLikes}>Unlike</button>
+        &nbsp;
+        <button onClick={resetLikes}>Reset</button>
       </article>
     </div>
   );

@@ -10,6 +10,17 @@ function ButtonsRescuePortfolioCard() {
   const addLike = () => {
     setLikes(likes + 1);
   };
+  
+  const removeLikes = () => {
+    if (likes > 0) {
+      setLikes(likes - 1)
+    }
+  }
+
+  const resetLikes = () => {
+    setLikes(0)
+  }
+
   return (
     <article className="card-jade">
       <h2>{name}</h2>
@@ -18,6 +29,10 @@ function ButtonsRescuePortfolioCard() {
         <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
       </p>
       <button onClick={addLike}>Like {likes}</button>
+      &nbsp;
+      <button onClick={removeLikes}>Unlike</button>
+      &nbsp;
+      <button onClick={resetLikes}>Reset</button>
     </article>
   );
 }

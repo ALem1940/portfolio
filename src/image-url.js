@@ -1,5 +1,6 @@
-const imageUrl = (width, height, brightness, sat) =>
+const imageUrl = (photo, width, height, brightness, sat) =>
   "https://images.unsplash.com/photo-1455156218388-5e61b526818b?w=" +
+  photo +
   width +
   "&h=" +
   height +
