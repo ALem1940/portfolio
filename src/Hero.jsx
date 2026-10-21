@@ -13,7 +13,7 @@ function Hero() {
   };
 
   const showBlackAndWhite = () => {
-    setSat(0);
+    setSat(0)
   };
 
 
