@@ -14,7 +14,26 @@ function Hero() {
     "Africans wearing red tribal attire walking in a group",
     "Mountain side off the coast under a blue sky",
   ];
+
+  const [index, setIndex] = useState(0);
+
   const [sat, setSat] = useState(0);
+
+  const nextPhoto = () => {
+    if (index === photos.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
+  };
+
+  const previousPhoto = () => {
+    if (index === 0) {
+      setIndex(photos.length - 1);
+    } else {
+      setIndex(index - 1);
+    }
+  };
 
   const showColor = () => {
     setSat(100);
@@ -24,11 +43,19 @@ function Hero() {
     setSat(0);
   };
 
-  const [src, alt] = heroPhoto(photos[0], 1200, 500, sat, descriptions[0]);
+  const [src, alt] = heroPhoto(
+    photos[index],
+    1200,
+    500,
+    sat,
+    descriptions[index],
+  );
   return (
     <div className="hero">
       <img src={src} alt={alt} style={{ filter: `saturate(${sat}%)` }} />
       <p className="hero-buttons">
+        <button onClick={previousPhoto}>Previous</button>
+        <button onClick={nextPhoto}>Next</button>
         <button onClick={showColor}>Color</button>
         <button onClick={showBlackAndWhite}>Black And White</button>
       </p>
