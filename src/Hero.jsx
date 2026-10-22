@@ -19,6 +19,8 @@ function Hero() {
 
   const [sat, setSat] = useState(0);
 
+  const [blur, setBlur] = useState(0);
+
   const nextPhoto = () => {
     if (index === photos.length - 1) {
       setIndex(0);
@@ -50,15 +52,32 @@ function Hero() {
     sat,
     descriptions[index],
   );
+
+  const moreBlur = () => {
+    setBlur(blur + 100);
+  };
+
+  const removeBlur = () => {
+    setBlur(0);
+  };
+
   return (
     <div className="hero">
-      <img src={src} alt={alt} style={{ filter: `saturate(${sat}%)` }} />
-      <p>Photo {index + 1} if {photos.length}</p>
+      <img
+        src={src + "&blur" + blur}
+        alt={alt}
+        style={{ filter: `saturate(${sat}%)` }}
+      />
+      <p>
+        Photo {index + 1} if {photos.length}
+      </p>
       <p className="hero-buttons">
         <button onClick={previousPhoto}>Previous</button>
         <button onClick={nextPhoto}>Next</button>
         <button onClick={showColor}>Color</button>
         <button onClick={showBlackAndWhite}>Black And White</button>
+        <button onClick={moreBlur}>More Blur</button>
+        <button onClick={removeBlur}>No Blur</button>
       </p>
     </div>
   );

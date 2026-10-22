@@ -6,7 +6,7 @@ A React site that shows the projects I built in Level 2.
 
 ## Components
 
-| Component | What it shows | Where its values come from |What it remembers|
+| Component | What it shows | Where its values come from |What it remembers-make true for what you built???|
 | A components is what React calls Javascripts function| It shows name of an action I want performed.| the value of a component comes from the data inside its block. |
 | `Header` | my name and a line about me | typed into the JSX |
 | `Hero` | my hero photo | `heroPhoto`, which calls `imageUrl` | whether the photo is in color | - |

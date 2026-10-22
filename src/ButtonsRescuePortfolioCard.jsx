@@ -38,6 +38,11 @@ function ButtonsRescuePortfolioCard() {
     label = "Show Less";
   }
 
+  let look = "outline"
+  if (open) {
+    look = " "
+  }
+
   return (
     <article className="card-jade">
       <h2>{name}</h2>
@@ -46,7 +51,7 @@ function ButtonsRescuePortfolioCard() {
       <p>
         <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
       </p>
-      <button onClick={toggleOpen}>{label}</button>
+      <button className={look} onClick={toggleOpen}>{label}</button>
       &nbsp;
       <button onClick={addLike}>Like {likes}</button>
       &nbsp;
