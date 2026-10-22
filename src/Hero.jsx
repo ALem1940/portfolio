@@ -53,6 +53,7 @@ function Hero() {
   return (
     <div className="hero">
       <img src={src} alt={alt} style={{ filter: `saturate(${sat}%)` }} />
+      <p>Photo {index + 1} if {photos.length}</p>
       <p className="hero-buttons">
         <button onClick={previousPhoto}>Previous</button>
         <button onClick={nextPhoto}>Next</button>
