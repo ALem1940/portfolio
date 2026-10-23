@@ -53,6 +53,8 @@ function Hero() {
     descriptions[index],
   );
 
+  const caption = "Photo" + (index + 1) + "of" + photos.length + ": " + descriptions[index]
+
   const moreBlur = () => {
     setBlur(blur + 100);
   };
@@ -61,16 +63,31 @@ function Hero() {
     setBlur(0);
   };
 
+  const showFirst = () => {
+    setIndex(0)
+  }
+
+  const showSecond = () => {
+    setIndex(1)
+  }
+
+  const showThird = () => {
+    setIndex(2)
+  }
+
+
   return (
     <div className="hero">
       <img
-        src={src + "&blur" + blur}
+        src={src + "&blur=" + blur}
         alt={alt}
         style={{ filter: `saturate(${sat}%)` }}
       />
+      <p>{caption}</p>
       <p>
-        Photo {index + 1} if {photos.length}
+        Photo {index + 1} of {photos.length}
       </p>
+      
       <p className="hero-buttons">
         <button onClick={previousPhoto}>Previous</button>
         <button onClick={nextPhoto}>Next</button>
@@ -78,6 +95,9 @@ function Hero() {
         <button onClick={showBlackAndWhite}>Black And White</button>
         <button onClick={moreBlur}>More Blur</button>
         <button onClick={removeBlur}>No Blur</button>
+        <button onClick={showFirst}>1</button>
+        <button onClick={showSecond}>2</button>
+        <button onClick={showThird}>3</button>
       </p>
     </div>
   );

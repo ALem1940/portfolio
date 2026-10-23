@@ -1,11 +1,7 @@
-const imageUrl = (photo, width, height, brightness, sat) =>
-  "https://images.unsplash.com/photo-1455156218388-5e61b526818b?w=" +
-  photo +
-  width +
-  "&h=" +
-  height +
-  "&fit=crop&auto=format&bri=" +
-  brightness +
-  "&sat=" +
-  sat;
+const imageUrl = (photo, width, height, brightness, sat) => 
+  `https://images.unsplash.com/${photo}?w=${width}&${height}&fit=crop&auto=format&sat=${sat}`
+  
+
+
+
 export default imageUrl;
