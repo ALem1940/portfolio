@@ -1,10 +1,10 @@
-import imageUrl from "./image-url.js"
+import imageUrl from "./image-url.js";
 
-const heroPhoto = (width, height, description) => {
-  const src = imageUrl(width, height)
-  const alt = description
-  const thumb = imageUrl(300,125)
-  return [src, alt, thumb]
-}
+const heroPhoto = (photo, width, height, sat, description) => {
+  const src = imageUrl(photo, width, height, 0, sat);
+  const alt = description;
+  const thumb = imageUrl(photo, 300, 125, 0, sat);
+  return [src, alt, thumb];
+};
 
 export default heroPhoto;
