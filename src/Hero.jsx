@@ -75,6 +75,12 @@ function Hero() {
     setIndex(2)
   }
 
+  const resetHero = () => {
+    setIndex(0)
+    setSat(0)
+    setBlur(0)
+  }
+
 
   return (
     <div className="hero">
@@ -98,6 +104,7 @@ function Hero() {
         <button onClick={showFirst}>1</button>
         <button onClick={showSecond}>2</button>
         <button onClick={showThird}>3</button>
+        <button onClick={resetHero}>Reset</button>
       </p>
     </div>
   );

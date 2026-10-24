@@ -7,6 +7,7 @@ function ButtonsRescuePortfolioCard() {
     "I built it in Level 2 to practice click listeners and the counter pattern.";
   const liveUrl = "https://alem1940.github.io/buttons-rescue/";
   const repoUrl = "https://github.com/ALem1940/buttons-rescue";
+  
   const [likes, setLikes] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -46,7 +47,8 @@ function ButtonsRescuePortfolioCard() {
   return (
     <article className="card-jade">
       <h2>{name}</h2>
-      <p>{description}</p>
+      {/* Description paragraph shows twice w/o comment out. Why? */}
+      {/* <p>{description}</p> */}
       <p>{text}</p>
       <p>
         <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
