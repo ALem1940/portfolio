@@ -21,6 +21,8 @@ function Hero() {
 
   const [blur, setBlur] = useState(0);
 
+  const [note, setNote] = useState("");
+
   const nextPhoto = () => {
     if (index === photos.length - 1) {
       setIndex(0);
@@ -45,15 +47,20 @@ function Hero() {
     setSat(0);
   };
 
-  const [src, alt] = heroPhoto(
-    photos[index],
-    1200,
-    500,
-    sat,
-    descriptions[index],
-  );
+  const readNote = (event) => {
+    setNote(event.target.value);
+  };
 
-  const caption = "Photo" + (index + 1) + "of" + photos.length + ": " + descriptions[index]
+  const [src, alt] = heroPhoto({
+    photos: photos[index],
+    width: 1200,
+    height: 500,
+    sat,
+    description: descriptions[index],
+  });
+
+  const caption =
+    "Photo" + (index + 1) + "of" + photos.length + ": " + descriptions[index];
 
   const moreBlur = () => {
     setBlur(blur + 100);
@@ -64,23 +71,22 @@ function Hero() {
   };
 
   const showFirst = () => {
-    setIndex(0)
-  }
+    setIndex(0);
+  };
 
   const showSecond = () => {
-    setIndex(1)
-  }
+    setIndex(1);
+  };
 
   const showThird = () => {
-    setIndex(2)
-  }
+    setIndex(2);
+  };
 
   const resetHero = () => {
-    setIndex(0)
-    setSat(0)
-    setBlur(0)
-  }
-
+    setIndex(0);
+    setSat(0);
+    setBlur(0);
+  };
 
   return (
     <div className="hero">
@@ -93,7 +99,7 @@ function Hero() {
       <p>
         Photo {index + 1} of {photos.length}
       </p>
-      
+
       <p className="hero-buttons">
         <button onClick={previousPhoto}>Previous</button>
         <button onClick={nextPhoto}>Next</button>
@@ -105,7 +111,9 @@ function Hero() {
         <button onClick={showSecond}>2</button>
         <button onClick={showThird}>3</button>
         <button onClick={resetHero}>Reset</button>
+        <input onChange={readNote} />
       </p>
+      <p>{note}</p>
     </div>
   );
 }
