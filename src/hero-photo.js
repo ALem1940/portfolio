@@ -9,7 +9,7 @@ const heroPhoto = ({ photo, width, height, sat, description }) => {
     height: 125,
     sat,
   });
-  return [src, alt, thumb];
+  return {src, alt, thumb};
 };
 
 export default heroPhoto;

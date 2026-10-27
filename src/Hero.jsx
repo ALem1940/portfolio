@@ -51,8 +51,8 @@ function Hero() {
     setNote(event.target.value);
   };
 
-  const [src, alt] = heroPhoto({
-    photos: photos[index],
+  const {src, alt} = heroPhoto({
+    photo: photos[index],
     width: 1200,
     height: 500,
     sat,
